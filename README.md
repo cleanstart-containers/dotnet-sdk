@@ -5,36 +5,24 @@ The CleanStart Dotnet-Sdk image provides a production-ready, security-hardened c
 📌 **Base Foundation**: Production-ready container from cleanstart.
 
 **Image Path**: `ghcr.io/cleanstart-containers/dotnet-sdk`
+
 **Registry**: cleanstart Registry
-
-## Key Features
-Core capabilities and strengths of this container
-
-
-
-## Common Use Cases
-Typical scenarios where this container excels
-
-
 
 ## Pull Latest Image
 Download the container image from the registry
 
 ```bash
-docker pull ghcr.io/cleanstart-containers/dotnet-sdk:dotnet-sdk
+docker pull ghcr.io/cleanstart-containers/dotnet-sdk:latest
 ```
 ```bash
-docker pull ghcr.io/cleanstart-containers/dotnet-sdk:container
-```
-```bash
-docker pull ghcr.io/cleanstart-containers/dotnet-sdk:enterprise
+docker pull ghcr.io/cleanstart-containers/dotnet-sdk:latest-dev
 ```
 
 ## Basic Run
 Run the container with basic configuration
 
 ```bash
-docker run -it --name dotnet-sdk ghcr.io/cleanstart-containers/dotnet-sdk:latest
+docker run -it --name dotnet-sdk ghcr.io/cleanstart-containers/dotnet-sdk:latest dotnet --version
 ```
 
 ## Production Deployment
@@ -51,13 +39,13 @@ docker run -d --name dotnet-sdk-prod \
 Volume Mount Mount local directory for persistent data
 
 ```bash
-docker run -v /app:/app ghcr.io/cleanstart-containers/dotnet-sdk:latest
+docker run -v /app:/app ghcr.io/cleanstart-containers/dotnet-sdk:latest dotnet --version
 ```
 
 Port Forwarding Run with custom port mappings
 
 ```bash
-docker run -p 8080:8080 ghcr.io/cleanstart-containers/dotnet-sdk:latest
+docker run -p 8080:8080 ghcr.io/cleanstart-containers/dotnet-sdk:latest dotnet --version
 ```
 
 ## Environment Variables
@@ -67,10 +55,6 @@ Configuration options available through environment variables
 |----------|---------|-------------|
 | ENV | production | Environment mode |
 | LOG_LEVEL | info | Logging level |
-
-## Security Best Practices
-Recommended security configurations and practices
-
 
 
 ## Kubernetes Security Context
